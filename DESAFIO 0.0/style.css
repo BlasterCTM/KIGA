@@ -1,0 +1,61 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+}
+
+html, body{
+    align-items: center;
+    height: 100%;
+    background: linear-gradient(420deg, #eb92be, #ffef78, #63c9b4, #6425C6);
+    
+    
+
+}
+
+.padree {
+   
+    
+    text-align: center;
+    margin: 0 auto;
+    display: inline-block;    
+    justify-content: center;
+    display: flex;
+    
+    
+}
+  
+
+
+#uno{
+    background-color: red;
+    border-radius: 10%;   
+    position: absolute;
+    height: 5vh;
+    width: 30vh;
+    margin-top: 0rem;
+    padding: 3rem;
+    font-size: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+    
+    
+    
+    
+
+}
+
+#dos{
+    background-color: grey;
+    height: 26.4rem;
+    width: 40rem;
+    border-radius: 1rem;
+    border: solid 1px black;
+    font-size: 1.3rem;
+    margin-top: 5.2rem;
+    
+
+
+    
+}
+

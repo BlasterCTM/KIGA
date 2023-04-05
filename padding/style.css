@@ -1,0 +1,13 @@
+div{
+    border: 1px solid black;
+    background-color: purple;
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+}
+
+
+div:hover{
+    color:white;
+}

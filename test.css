@@ -1,0 +1,55 @@
+
+  
+
+
+p{
+
+    color:purple;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.test{
+    color:rgb(red, green, blu);
+    background-color: red ;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    text-align: center;
+}
+
+.hola{
+    color:white;
+    background-color: black;
+    border-radius: 8px;
+    display: flex;
+    padding: 10px;
+    margin: 20px;
+    position: absolute;
+    height: 200px;
+    width: 1000px;
+    bottom: 100px;
+    box-shadow: 0 6px 16px 0 rgba(31,36,38,.15);
+}
+
+.hola:hover{
+    color:blueviolet;
+
+}
+
+
+#id1 {
+    list-style: none;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    background-color: red;
+    border-radius: 200px;
+    position: absolute;
+    bottom: 10px;
+    right: 63px;
+}
+
+
+
