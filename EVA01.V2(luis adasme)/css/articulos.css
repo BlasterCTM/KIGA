@@ -1,0 +1,157 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.menu-supremo{
+	width: 100%;
+	margin: 30px auto;
+	background: #333;
+    text-align: center;
+}
+
+.menu-supremo ul{
+	list-style: none;
+}
+
+.menu > li{
+	position: relative;
+	display: inline-block;
+}
+
+.menu > li > a{
+	display: flex;
+	padding: 15px 20px;
+	color: white;  
+
+	text-decoration: none;
+}
+
+.menu li a:hover{
+	color: purple;
+	transition: all .3s;
+ 
+}
+
+
+
+.sub-menu{
+	position: absolute;
+	background: #333333;
+	width: 120%;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 1.5s;
+}
+
+.sub-menu li a{
+	display: flex;
+	padding: 15px;
+	color: #fff;
+	
+	text-decoration: none;
+}
+
+.menu li:hover .sub-menu{
+	visibility: visible;
+	opacity: 1;
+}
+
+
+
+.titulo, .texto{
+    padding-right: 12px;
+    padding-left: 12px;
+    text-transform: capitalize;
+
+}
+
+.texto{
+    margin-bottom: 24px;
+    line-height: 1.3;
+}
+
+
+figure{
+    margin:0;
+}
+
+
+.section-card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+
+.card-container{
+    margin-top: 2%;
+    margin-block-end: auto;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-container{
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0 6px 16px 0 rgba(31,36,38,.15);
+    
+}
+
+.card-img{
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    overflow: hidden;
+    height: 100px;
+}
+
+.imagen{
+    max-width: 140%;
+    height: auto;
+}
+
+/*clase ul y li*/
+
+.ul-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+  
+.li-li {
+    margin: 10px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
