@@ -1,0 +1,318 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+
+body{
+    font-size: 1.6rem;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #101010;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='1' viewBox='0 0 40 1' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20v1H0z' fill='%23000000' fill-opacity='0.37' fill-rule='evenodd'/%3E%3C/svg%3E");
+    color: #ffffff; /*este fondo lo saque de heropatterns*/
+}
+a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.contenedor{
+    width: 90%; /*Le di que solo ocupe el 90% y con el margin auto lo centre*/
+    margin:auto
+}
+
+/*NAV*/
+
+.nav-main{ /*Aca le di estilo a todo mi nav, para que se pusieran separados y espacios entre ellos le defini una altura al nav tambien y le di un padding a lo alto para separar*/
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6rem;
+    padding: 2rem 0;
+    
+}
+
+.nav-logo{ /*Imagen del logo*/
+    width: 5rem;
+}
+.input{
+    border-radius: .1rem;
+    margin-right: .5rem;
+    transform: translateY(-40rem);
+    transition: transform .1s ease-in-out;
+    width: 10rem; /*le diremos que al colocar la clase show al input se le quitara los -40rem y se mostrara en pantalla a solo .1-rem todo esto lo haremos en js*/
+    
+}
+input.show{
+    border-radius: .1rem;
+    margin-right: .5rem;
+    transform: translateY(-.1rem);
+    transition: transform .1s ease-in-out;
+    width: 10rem;
+
+    
+    
+}
+.nav-main ul.nav-menu-r li a:hover{
+    border-bottom: .2rem;
+    }
+.nav-main ul.nav-menu-r li a i:hover{
+border-bottom: .2rem solid;
+}
+
+/*NAV IZQUIERDA*/
+
+.nav-main ul {  /*para ganar los textos de mi nav uno al lado del otro*/
+    display: flex;
+}
+
+.nav-main ul li{ /*aca separe los textos para que no estuvieran pegados*/
+    padding: 1rem;
+}
+.nav-main ul li a:hover{
+    border-bottom: .2rem solid #ffffff; /*con esto le puse que se activara el borde de abajo y que sea solido de color blanco y que este 2 pixeles por debajo cuando pase el raton por encima con el hover*/
+}
+.menu-boton{
+    position: absolute;
+    cursor: pointer;
+    top: 1.5rem;
+    right: 3rem;
+    z-index: 2;
+    font-size: 2.5rem;
+    display: none;
+}
+.nav-main ul.nav-menu{ /*aca le dije que ocupara el flex de su padre y que se fueran los elementos a la izquierda y se parados por 20 pixeles para que no quedaran pegados al logo*/
+    flex:1;
+    margin-left: 2rem;
+}
+
+/*Portada*/
+hr {
+    margin: 1rem 0;
+}
+
+.portada {
+    width: 100%;
+    height: 55rem;
+    background:url(img/portada.jpg)no-repeat center center/cover ; /*Para que la imagen este centrada que no se repita y el center cover es para que ocupe toda el display*/
+    padding: 5rem;
+    margin-bottom: 2rem;
+    /*espacio para los elementos que van a ir abajo*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    /*Para encajar el texto de la imagen al fondo y al centro*/
+}
+.boton{
+    cursor: pointer;    
+    display: inline-block;
+    border: 0;
+    font-style: bold;
+    padding: 1rem 2rem;
+    background-color: #262626;
+    color: #ffffff;
+    font-size: 1.5rem;
+    border: .1rem solid #ffffff;
+    margin-top: 1rem;
+    /*aca le di estilo de boton al leer mas, con el cursos pointer el mouse al posarse arriba lo toma como boton, le di estilo a la fuente color tamaño y un borde blanco tambien el display block para que ocupe todo el el display y este al centro siempre*/
+}
+.boton:hover{
+    opacity: .7;    /*Efecto de opacidad*/
+}
+
+/*Seccion Info*/
+
+.cards{
+    display: grid; /*el display grid me sirve para hacer columnas o rows de manera que por ejemplo si tengo 4 elementos y le digo cuantos elementos quuiero por columnas con grid template, con 4,1fr es como decir 4 columnas con elementos a ocupar asi si colocara por ejemplo 2,1fr me quedarian dos columnas con 2 elementos cada 1*/
+    grid-template-columns: repeat( 4,1fr);
+    gap:2.5rem; /*gap es para separar los elementos entre ellos*/
+    margin: 1rem 0;
+}
+
+.cards img{
+    width: 100%;
+    height: 24rem;
+    
+}
+
+.cards h3{
+    font-size: 2rem;
+    margin: 1rem 0;
+    /*Al titulo solo le puse mas tamaño de fuente y un margen arriba y abajo de 10px*/
+
+}
+.cards p{
+    text-align:justify;
+}
+.cards a {
+    padding: 1rem 0;
+    color: #f2f2f2;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: bold;
+    /*Aca el leer mas le di un color un padding arriba y abajo con el upercasse lo pongo en mayuscula, le pongo un inlineblock para que quede alineado y ocupe solo su cuadro, con fontweight bold lo pongo en negrita*/
+}
+.cards a:hover{
+    text-decoration:underline ;
+    /*al pasar el mouse por encima del leer mas se le colocara una linea abajo es como lo que hice con el borde pero mas rapido y no tan bonito*/
+}
+/*Banner*/
+.banner{
+    width: 100%;
+    height: 35rem;
+    background: url(img/banner.jpg);
+    margin-bottom: 4rem;
+}
+.banner .cont{
+    width: 40%;
+    padding: 5rem 0 0 3rem;
+    color: #fff;
+}
+.banner p,
+.banner h2{
+margin: 1rem 0 2rem 0;
+}
+/*Banner2*/
+.banner2{
+    background: url(img/banner2.jpg);
+    height: 35rem;
+    width: 100%;
+}
+
+.banner2 .cont{
+    width: 40%;
+    padding: 5rem 0 0 3rem;
+    color: #fff;
+}
+.banner2 p,
+.banner2 h2{
+margin: 1rem 0 2rem 0;
+}
+
+/*Social*/
+.social {
+    margin:5rem;
+}
+.social p{
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+.links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.links a{
+    margin: 0 3rem;
+}
+.links a i{
+    font-size: 5rem;
+}
+
+/*Footer*/
+
+.footer{
+    background-color: #2f3640;
+    color: #616161;
+    font-size: 1.2rem;
+    padding: 3.5rem 0;
+}
+.f-contenedor{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+    align-items: flex-start;
+    justify-content: center;
+}
+.f-contenedor ul{
+    margin: 0 auto;
+}
+.f-contenedor ul li{
+    line-height: 3;
+}
+.copy{
+    background-color: #2f3640;
+    color:white;
+    font-size: 1.2rem; 
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+@media (max-width: 870px){ /*Aca le digo que aplique esto cuando el maximo de ancho sea 800px*/
+
+.menu-boton{
+    display: block;
+}
+
+.nav-main ul.nav-menu { /*Aca estoy dejando el menu al lado izquierdo con una position fixed para que al hacer scroll no se vaya la bara le pongo el display block para que abarque todo y no se me coloquen cosas al lado, el top y left 0 son para decirle que lo quiero arriba y a la izquierda sin margenes pegado el height para que ocupe hacia abajo solo un 80%, el tranform translate es para que no se vea el menu mas mas abajo loa activaremos con un click en js el opacity .9 es transparencia*/
+    display:block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #2f3640;
+    height: 100%;
+    padding: 3rem;
+    opacity: .9;
+    transform: translateX(-40rem);
+    transition: transform .5s ease-in-out;
+    
+}
+.nav-main ul.nav-menu.show{
+    transform: translateX(-2rem);
+    transition: transform .5s ease-in-out;/*el transform translate es para moverlo en el eje X de esta forma esta justo al lado izquierdo al moverlo -20 pixeles queda pegado el menu completo a la izquierda y no queda flotando asi se puede ver y lo activaremos con js en js le diremos que al colocar la clase show al nav-menu se le quitara los -40rem y se mostrara en pantalla a solo -2rem*/
+}
+.nav-main ul.nav-menu li{
+    padding: 2rem;
+    font-size: 1.4rem;
+}
+.nav-main ul.nav-menu-r{
+    margin-right: 4rem;
+}
+.cards{
+        grid-template-columns: repeat(2,1fr); /*para que sean dos columnas*/
+    }
+.banner .cont{
+    width: 80%;
+}
+.banner2 .cont{
+    width: 80%;
+    
+}
+.footer .f-contenedor{
+    grid-template-columns: repeat(2,1fr); 
+}
+}
+
+@media (max-width: 500px) {
+    .menu-boton{
+        display: block;}
+    .cards{
+        grid-template-columns: 1fr; /*1 sola columna*/
+    }
+    .banner{
+        height: 43rem;
+    }
+    .banner2{
+        height: 43rem;
+    }
+    .banner .cont{
+        width: 100%;
+        padding-right: 3rem;
+    }
+    .banner2 .cont{
+        width: 100%;
+        padding-right: 3rem;
+    }
+}
